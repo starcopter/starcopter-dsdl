@@ -1,0 +1,11 @@
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+starcopter.temp.PWM16.0.1 pwm7
+starcopter.temp.PWM16.0.1 pwm8
+
+Servo.0.1 gear1
+Servo.0.1 gear2
+
+@extent 63 * 8

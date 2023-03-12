@@ -1,0 +1,10 @@
+uavcan.si.unit.angle.Scalar.1.0 position_setpoint
+uavcan.si.unit.angle.Scalar.1.0 position_feedback
+uavcan.si.unit.angle.Scalar.1.0 position_estimate
+uavcan.si.unit.electric_current.Scalar.1.0 current
+
+int16 actuator_signal
+
+void16
+
+@sealed

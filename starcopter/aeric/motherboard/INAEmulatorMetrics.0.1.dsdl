@@ -1,0 +1,29 @@
+# aeric v0.2 Motherboard System State
+
+uint16 manufacturer_id
+uint16 MANUFACTURER_ID = 0x5449  # "TI"
+
+uint16 device_id
+uint16 DEVICE_ID_INA226 = 0x2260  # INA226
+uint16 DEVICE_ID_INA228 = 0x2281  # INA228, Rev. 1
+uint16 DEVICE_ID_INA238 = 0x2381  # INA238, Rev. 1
+
+uint16 config_register_write_count
+uint16 adc_config_register_write_count
+uint16 shunt_cal_register_write_count
+uint16 other_register_write_count
+
+uint16 config_register_read_count
+uint16 adc_config_register_read_count
+uint16 shunt_cal_register_read_count
+uint16 vbus_register_read_count
+uint16 dietemp_register_read_count
+uint16 current_register_read_count
+uint16 power_register_read_count
+uint16 manufacturer_id_register_read_count
+uint16 device_id_register_read_count
+uint16 other_register_read_count
+
+uint16 ina_state_machine_reset_count
+
+@extent 63 * 8

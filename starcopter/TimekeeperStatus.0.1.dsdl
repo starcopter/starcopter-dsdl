@@ -1,0 +1,13 @@
+uavcan.time.SynchronizedTimestamp.1.0 previous_sync_timestamp_us
+# payload of the previously received uavcan.time.Synchronization message
+saturated int8 timesync_master_node_id  # tracked time synchronization master
+
+truncated uint56 previous_local_timestamp_us
+# locally perceived arrival time of the above referenced synchronization message
+
+saturated int64 synchronized_timestamp_offset_us  # offset between synchronized and local clock, effectively boot time
+
+uint16 TIM3_ARR_TARGET_VALUE = 50000
+uint16 tim3_auto_reload_register
+
+@extent 63 * 8

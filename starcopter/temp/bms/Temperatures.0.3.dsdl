@@ -1,0 +1,21 @@
+# Message publishing the eight temperatures measured by BMS A.3.
+# This message is part of a prototype proof-of-concept implementation and shall not be used in production.
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+uavcan.si.unit.temperature.Scalar.1.0 pack1_temp           # Pack temperature 1, measured at pin 5 of P4
+uavcan.si.unit.temperature.Scalar.1.0 pack2_temp           # Pack temperature 2, measured at pin 3 of P4
+uavcan.si.unit.temperature.Scalar.1.0 power_stage_temp     # Power Stage temperature
+uavcan.si.unit.temperature.Scalar.1.0 connector_temp       # Connector temperature
+uavcan.si.unit.temperature.Scalar.1.0 TS5                  # Auxiliary temperature 5
+uavcan.si.unit.temperature.Scalar.1.0 TS6                  # Auxiliary temperature 6
+uavcan.si.unit.temperature.Scalar.1.0 TS7                  # Auxiliary temperature 7
+uavcan.si.unit.temperature.Scalar.1.0 TS8                  # Auxiliary temperature 8
+uavcan.si.unit.temperature.Scalar.1.0 stm32_temperature    # Internal STM32 core temperature
+uavcan.si.unit.temperature.Scalar.1.0 bq76925_temperature  # Internal BQ76925 core temperature
+
+@extent 60 * 8

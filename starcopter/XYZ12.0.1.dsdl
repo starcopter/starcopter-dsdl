@@ -1,0 +1,7 @@
+#
+
+int12 x
+int12 y
+int12 z
+
+@sealed

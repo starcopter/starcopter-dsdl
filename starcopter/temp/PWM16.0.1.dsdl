@@ -1,0 +1,6 @@
+# Pulse Width Modulation Channel
+
+uint16 duty_cycle_us  # PWM duty cycle in microseconds
+uint16 period_us      # PWM period (1/f) in microseconds
+
+@sealed

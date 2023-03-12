@@ -1,0 +1,18 @@
+# aeric v0.2 Motherboard System State
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+bool pssky1_on  # 5V Skynode Primary: voltage threshold
+bool pssky1_pg  # 5V Skynode Primary: power good
+bool pssky2_on  # 5V Skynode Secondary: voltage threshold
+bool pssky2_pg  # 5V Skynode Secondary: power good
+bool psmmb_on   # 25V Motor Mount Board: voltage threshold
+bool psmmb_pg   # 25V Motor Mount Board: power good
+bool psppb_on   # 25V Pixhawk Payload Bus: voltage threshold
+bool psppb_pg   # 25V Pixhawk Payload Bus: power good
+
+@extent 63 * 8

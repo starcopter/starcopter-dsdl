@@ -1,0 +1,7 @@
+# This message is part of a prototype proof-of-concept implementation and shall not be used in production.
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+PWM16.0.1[<=16] pwm
+
+@extent 124 * 8

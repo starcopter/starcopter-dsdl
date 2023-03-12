@@ -1,0 +1,9 @@
+# Time synchronization message, as received by a time sync client.
+
+# the two fields below specify timesync message received just now
+uint8 msg_master_node_id
+uint8 msg_transfer_id
+
+uint64 monotonic_reception_timestamp_us  # local reception timestamp of message with msg_transfer_id
+
+@extent 63 * 8

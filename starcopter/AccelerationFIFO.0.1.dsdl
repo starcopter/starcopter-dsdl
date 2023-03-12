@@ -1,0 +1,11 @@
+# Acceleration data type for motor mount boards
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+uint32 DT_UNKNOWN = 0
+uint32 dt_ns
+uint8 lsb_mg
+
+XYZ12.0.1[<=32] samples
+
+@extent 184 * 8

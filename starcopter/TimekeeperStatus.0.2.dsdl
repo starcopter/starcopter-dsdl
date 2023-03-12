@@ -1,0 +1,16 @@
+saturated int64 offset_us
+# (Estimated) offset between synchronized and local clock, e.g. synchronized_timestamp - monotonic_timestamp.
+# This is effectively the client's (perceived) boot time in synchronized time domain. While this value should not
+# change much while a client is running, it will drift by the amount of the client's clock frequency error.
+
+uint64 OFFSET_STD_INFINITE = 0x00ffffffffffffff
+saturated uint64 offset_std_us
+# Estimated offset standard deviation
+
+float32 frequency_error
+# Frequency error, relative, as estimated by the client.
+# A positive error indicates the client's monotonic clock running too slow.
+
+float32 frequency_std
+
+@extent 63 * 8

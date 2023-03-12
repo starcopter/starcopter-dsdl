@@ -1,0 +1,31 @@
+# aeric v0.2 connector and PCB temperatures, measured by the motherboard
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_m1       # M1 arm connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_m3       # M3 arm connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_m5       # M5 arm connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_m7       # M7 arm connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_m9       # M9 arm connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_m11      # M11 arm connector temperature 
+
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_b2       # B2 battery connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_b4       # B4 battery connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_b6       # B6 battery connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_b8       # B8 battery connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_b10      # B10 battery connector temperature 
+uavcan.si.unit.temperature.Scalar.1.0 conn_temp_b12      # B12 battery connector temperature 
+
+uavcan.si.unit.temperature.Scalar.1.0 mb_temp_m3_top     # motherboard temperature, top side, facing M3
+uavcan.si.unit.temperature.Scalar.1.0 mb_temp_b6_bot     # motherboard temperature, bottom side, facing B6
+uavcan.si.unit.temperature.Scalar.1.0 mb_temp_m9_top     # motherboard temperature, top side, facing M9
+uavcan.si.unit.temperature.Scalar.1.0 mb_temp_b12_bot    # motherboard temperature, bottom side, facing B12
+
+uavcan.si.unit.temperature.Scalar.1.0 stm32_core_temp    # internally measured STM32 core temperature
+uavcan.si.unit.temperature.Scalar.1.0 iis3dwb_core_temp  # IIS3DWB core temperature
+
+@extent 120 * 8

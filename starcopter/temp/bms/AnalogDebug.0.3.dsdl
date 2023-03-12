@@ -1,0 +1,10 @@
+uavcan.si.unit.voltage.Scalar.1.0 vi_raw         # raw current measurement
+uavcan.si.unit.voltage.Scalar.1.0 vbat           # measured VBAT voltage
+uavcan.si.unit.voltage.Scalar.1.0 vrefint        # measured internal reference voltage
+uavcan.si.unit.voltage.Scalar.1.0 vrefint_error  # difference between calibrated and measured reference voltage
+uavcan.si.unit.voltage.Scalar.1.0 key_voltage    # raw measured voltage at the KEY pin
+uavcan.si.unit.voltage.Scalar.1.0 pack_raw       # raw measured VPACK voltage
+uavcan.si.unit.voltage.Scalar.1.0 vref           # VREF+ voltage, estimated via VREFINT measurement
+uavcan.si.unit.voltage.Scalar.1.0 vsense_cal     # VIOUT(SENSEP) or VIOUT(SENSEN) calibration value
+
+@extent 60 * 8
