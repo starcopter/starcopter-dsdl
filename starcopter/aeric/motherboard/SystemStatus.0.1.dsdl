@@ -1,0 +1,20 @@
+# aeric v0.3 Motherboard System Status 
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+reg.udral.physics.electricity.Power.0.1 mmb_power            # motor mount board's power consumption   
+
+reg.udral.physics.electricity.Power.0.1 v25_ext_power        # power consumption of external 25v net
+ 
+reg.udral.physics.electricity.Power.0.1 v5_ext_power         # power consumption of external 5v net
+
+reg.udral.physics.electricity.Power.0.1 v5_power             # power consumption of internal 5v net
+
+uavcan.si.unit.voltage.Scalar.1.0 vbat                       # stm32 supply voltage monitoring
+uavcan.si.unit.voltage.Scalar.1.0 vrefint                    # stm32 internal reference voltage monitoring
+
+@extent 63 * 8

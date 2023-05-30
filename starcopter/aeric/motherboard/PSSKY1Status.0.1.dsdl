@@ -1,0 +1,12 @@
+# aeric v0.3 Skynode's Primary Power Supply Status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+bool pssky1_on   # 5V Skynode Primary: voltage threshold
+bool pssky1_pg   # 5V Skynode Primary: power good
+
+@extent 63 * 8
