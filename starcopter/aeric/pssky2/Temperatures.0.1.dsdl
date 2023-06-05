@@ -1,0 +1,13 @@
+# aeric v0.3 Skynode's Secondary Power Supply On Board Temperatures
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+uavcan.si.unit.temperature.Scalar.1.0 pstage_temperature      # power stage temperature sensor
+uavcan.si.unit.temperature.Scalar.1.0 cell_temperature        # monitor cell temperature
+uavcan.si.unit.temperature.Scalar.1.0 stm32_core_temperature  # internally measured STM32 core temperature
+
+@extent 63 * 8

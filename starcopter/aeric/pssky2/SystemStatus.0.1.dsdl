@@ -1,0 +1,20 @@
+# aeric v0.3 Skynode's Secondary Power Supply (PSSKY2) System status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+uavcan.si.unit.voltage.Scalar.1.0 cell_voltage                      # voltage across cell
+uavcan.si.unit.electric_current.Scalar.1.0 cell_current             # cell current
+
+uavcan.si.unit.electric_current.Scalar.1.0 cell_charge_current      # cell charge current
+uavcan.si.unit.electric_current.Scalar.1.0 buck_stage_current       # buck stage current
+
+uavcan.si.unit.voltage.Scalar.1.0 boost_stage_voltage               # boost stage output voltage
+
+uavcan.si.unit.voltage.Scalar.1.0 vbat                              # stm32 supply voltage monitoring
+uavcan.si.unit.voltage.Scalar.1.0 vrefint                           # stm32 internal reference voltage monitoring
+
+@extent 63 * 8
