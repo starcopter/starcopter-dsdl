@@ -1,0 +1,26 @@
+# aeric v0.3 Skynode's Secondary Power Supply Status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+bool pssky2_on      # 5V Skynode Secondary: voltage enable
+bool pssky2_pg      # 5V Skynode Secondary: power good
+
+uint2 charge_status # cell charge status
+
+uint2 UNKNOWN = 0
+# The charger's status is not known at the MODE_MAINTENANCE
+
+uint2 CHARGING = 1
+# The charge is in progress (including automatic charging)
+
+uint2 DISABLED = 2
+# The cell charge is completed, or the charger is disabled or in sleep mode
+
+uint2 FAULT = 3
+# The charger is in fault state (include OVP, BAT OVP, TSHUT, TS, TMR_EXP)
+
+@extent 63 * 8
