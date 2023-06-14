@@ -1,0 +1,20 @@
+# aeric v0.3 Battery Management System (BMS) Temperatures
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+uavcan.si.unit.temperature.Scalar.1.0 bat_t1            # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 bat_t2            # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 bat_t3            # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 bms_t4            # temperature sense across current sense resistor
+uavcan.si.unit.temperature.Scalar.1.0 bms_t5            # temperature sense near power stage (FET drivers)
+uavcan.si.unit.temperature.Scalar.1.0 bms_t6            # temperature sense across positive battery rail
+uavcan.si.unit.temperature.Scalar.1.0 bms_t7            # temperature sense across negative battery rail
+
+uavcan.si.unit.temperature.Scalar.1.0 stm32_core_temp   # internally measured STM32 core temperature
+uavcan.si.unit.temperature.Scalar.1.0 bq76925_int_temp  # BQ76925 internal temperature sensor
+
+@extent 63 * 8

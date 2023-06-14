@@ -1,0 +1,25 @@
+# aeric v0.3 BMS System Status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+bool btn_in_status                               # bms input button status
+bool boot_pin_status                             # bms boot pin status
+bool chg_pin_status 	                         # bms CHG pin status
+bool dsg_pin_status                              # bms DSG pin status
+bool pdsg_en_status                              # bms PDSG_EN pin status
+bool vbus_active_status                          # bms vbus active pin status
+
+uavcan.si.unit.voltage.Scalar.1.0 bat_key        # measured battery key voltage
+
+uavcan.si.unit.voltage.Scalar.1.0 vrefint        # stm32 external reference voltage monitoring
+uavcan.si.unit.voltage.Scalar.1.0 vdd            # stm32 supply voltage monitoring
+
+uavcan.si.unit.electric_current.Scalar.1.0 i5    # 5v current consumption
+
+@extent 63 * 8
+
+
