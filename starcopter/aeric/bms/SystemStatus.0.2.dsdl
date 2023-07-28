@@ -1,0 +1,43 @@
+# aeric v0.3 BMS System Status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+bool btn_in_status                                          # bms user/input button status
+bool boot_pin_status                                        # bms boot pin status
+bool chg_pin_status 	                                    # bms CHG pin status
+bool dsg_pin_status                                         # bms DSG pin status
+bool pdsg_en_status                                         # bms PDSG_EN pin status
+bool vbus_active_status                                     # bms vbus active pin status
+bool node_active_status                                     # bms Cyphal node active status
+
+bool vbat_ripple_low                                        # battery voltage ripple low status
+bool vpack_ripple_low                                       # pack voltage ripple low status
+bool ibat_ripple_low                                        # battery current ripple low status
+bool ibat_low                                               # battery current low status
+
+bool bat_key_status
+# bms bat keying status
+# The status flag is 1 if the BMS is inside the copter
+# The status flag it 0 if the BMS is outside the copter
+
+bool pack_current_status
+# bms pack current active status
+# The status is 1 if pack current is above threshold
+# The status is 0 if pack current is below threshold
+
+uavcan.si.unit.voltage.Scalar.1.0 bat_key                   # measured battery key voltage
+
+uavcan.si.unit.voltage.Scalar.1.0 vbat_ripple               # battery voltage ripple measurements
+uavcan.si.unit.voltage.Scalar.1.0 vpack_ripple              # pack voltage ripple measurements
+uavcan.si.unit.electric_current.Scalar.1.0 ibat_ripple      # battery current ripple measurements
+
+uavcan.si.unit.electric_current.Scalar.1.0 i5       	    # 5v current consumption
+
+uavcan.si.unit.voltage.Scalar.1.0 vrefint                   # stm32 external reference voltage monitoring
+uavcan.si.unit.voltage.Scalar.1.0 vdd                       # stm32 supply voltage monitoring
+
+@extent 63 * 8
