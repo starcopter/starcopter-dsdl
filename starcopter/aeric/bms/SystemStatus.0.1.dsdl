@@ -1,5 +1,7 @@
 # aeric v0.3 BMS System Status
 
+@deprecated
+
 uavcan.time.SynchronizedTimestamp.1.0 timestamp
 
 void8
