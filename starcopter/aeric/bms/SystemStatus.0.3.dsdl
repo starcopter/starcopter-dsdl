@@ -1,7 +1,5 @@
 # aeric v0.3 BMS System Status
 
-@deprecated
-
 uavcan.time.SynchronizedTimestamp.1.0 timestamp
 
 void8
@@ -14,22 +12,14 @@ bool chg_pin_status 	                                    # bms CHG pin status
 bool dsg_pin_status                                         # bms DSG pin status
 bool pdsg_en_status                                         # bms PDSG_EN pin status
 bool vbus_active_status                                     # bms vbus active pin status
-bool node_active_status                                     # bms Cyphal node active status
+bool can_iface_status                                       # bms CAN interface status (Error Active / Error Passive)
 
-bool vbat_ripple_low                                        # battery voltage ripple low status
-bool vpack_ripple_low                                       # pack voltage ripple low status
-bool ibat_ripple_low                                        # battery current ripple low status
-bool ibat_low                                               # battery current low status
+bool vbat_ripple_high                                       # battery voltage ripple above threshold
+bool vpack_ripple_high                                      # pack voltage ripple above threshold
+bool ibat_ripple_high                                       # battery current ripple above threshold
+bool abs_ibat_high                                          # absolute battery current above threshold
 
-bool bat_key_status
-# bms bat keying status
-# The status flag is 1 if the BMS is inside the copter
-# The status flag it 0 if the BMS is outside the copter
-
-bool pack_current_status
-# bms pack current active status
-# The status is 1 if pack current is above threshold
-# The status is 0 if pack current is below threshold
+bool bat_key_status                                         # bms analog key connected (inside copter, not open wire)
 
 uavcan.si.unit.voltage.Scalar.1.0 bat_key                   # measured battery key voltage
 
