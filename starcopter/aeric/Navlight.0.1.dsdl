@@ -9,6 +9,7 @@ saturated uint10 brightness
 # or scale a setpoint with ambient light conditions.
 
 uint10 BRIGHTNESS_MAX = 1000  # maximum brightness, brightness values above this are being clipped
+void2
 
 saturated uint2 color
 # Navigation light color
@@ -17,5 +18,6 @@ uint2 OFF   = 0
 uint2 RED   = 1
 uint2 GREEN = 2
 uint2 WHITE = 3
+void2
 
 @sealed

@@ -1,5 +1,5 @@
 # Array of Navigation Light Setpoints
 
-Navlight.0.1[<=16] setpoint
+Navlight.0.1[6] setpoint
 
 @extent 34 * 8
