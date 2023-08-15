@@ -1,0 +1,6 @@
+# Array of Navigation Light Setpoints
+
+Navlight.0.1[6] setpoint
+
+# Allocate space for up to 16 setpoints
+@extent 32 * 8

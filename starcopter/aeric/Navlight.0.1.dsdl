@@ -1,0 +1,26 @@
+# Single Navigation Light State, Setpoint and Feedback
+#
+# Only a single color may be enabled at any given time.
+
+saturated uint10 brightness
+# Brightness in range [0, 1000]. Values in range (1000, 1024) are rounded down to 1000.
+# The unit of brightness is implementation-defined. It may just be the driver's PWM duty cycle,
+# but a device may also apply a nonlinear correction curve on top of the raw brightness value,
+# or scale a setpoint with ambient light conditions.
+
+uint10 BRIGHTNESS_MAX = 1000  # maximum brightness, brightness values above this are being clipped
+
+void2
+
+saturated uint2 color
+# Navigation light color
+
+uint2 OFF   = 0
+uint2 RED   = 1
+uint2 GREEN = 2
+uint2 WHITE = 3
+
+void2
+
+@assert _offset_ == {16}
+@sealed
