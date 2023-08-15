@@ -2,4 +2,5 @@
 
 Navlight.0.1[6] setpoint
 
-@extent 34 * 8
+# Allocate space for up to 16 setpoints
+@extent 32 * 8

@@ -22,4 +22,5 @@ uint2 WHITE = 3
 
 void2
 
+@assert _offset_ == {16}
 @sealed
