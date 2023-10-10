@@ -9,4 +9,4 @@ Servo.0.1[<=2] servo
 @assert _offset_.max % 32 == 0
 @assert _offset_.max < 64 * 8  # one CAN FD frame
 
-@extent 136 * 8  # eight servo feedback channels, three FD frames
+@sealed
