@@ -12,9 +12,6 @@ reg.udral.physics.electricity.Power.0.1 v25_power               # power consumpt
 
 uavcan.si.unit.voltage.Scalar.1.0 v12                           # voltage on 12v supply net
 
-uavcan.si.unit.electric_current.Scalar.1.0 imot1                # motor 1 current consumption
-uavcan.si.unit.electric_current.Scalar.1.0 imot2                # motor 2 current consumption
-
 uavcan.si.unit.voltage.Scalar.1.0 vdd                           # stm32 supply voltage monitoring
 uavcan.si.unit.voltage.Scalar.1.0 vrefint                       # stm32 internal reference voltage monitoring
 
