@@ -1,0 +1,25 @@
+# Servo characteristics, both mechanical and electrical.
+# This type is expected to be used primarily for feedback purposes, but may also be used as a setpoint message.
+
+uavcan.si.unit.angle.Scalar.1.0 position
+# Motor angular position in rad. The reference position is application defined.
+# When no absolute position is known, this field should be set to NaN (not-a-number).
+# Note that in landing gear context, this is the position of the motor shaft, not the leg mechanism.
+
+uavcan.si.unit.angular_velocity.Scalar.1.0 speed
+# Motor angular velocity in rad/s.
+# In landing gear context, this is the velocity of the motor shaft, not the leg itself.
+
+uavcan.si.unit.electric_current.Scalar.1.0 current
+# Phase current in A.
+# The sign of the current shall match the sign of torque at the motor shaft: when running forward (speed > 0) and
+# driving a load (in contrast to being driven by a load, generator mode), the current shall be positive as well.
+
+uavcan.si.unit.voltage.Scalar.1.0 voltage
+# Phase voltage in V.
+# This is the product of DC bus voltage and driver duty cycle, with a sign depending on the direction.
+# Barring edge cases, the voltage is expected to have the same sign as current.
+#
+# Example: at a supply voltage of 12 V and running at 25% duty cycle in reverse, the phase voltage would be -3 V.
+
+@sealed
