@@ -1,0 +1,11 @@
+# Single Servo Gear Setpoint
+
+# Only a single setpoint is sufficient for both servo gears 
+
+bool position_setpoint 
+# position setpoint either extended or retracted 
+
+bool EXTEND = 0  
+bool RETRACT = 1
+
+@sealed
