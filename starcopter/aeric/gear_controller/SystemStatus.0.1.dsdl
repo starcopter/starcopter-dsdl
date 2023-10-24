@@ -1,0 +1,21 @@
+# aeric v0.3 Gear Controller System Status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+reg.udral.physics.electricity.Power.0.1 v5_power                # power consumption from the 5v net
+
+reg.udral.physics.electricity.Power.0.1 v25_power               # power consumption from the 25v net
+
+uavcan.si.unit.voltage.Scalar.1.0 v12                           # voltage on 12v supply net
+
+uavcan.si.unit.voltage.Scalar.1.0 vdd                           # stm32 supply voltage monitoring
+uavcan.si.unit.voltage.Scalar.1.0 vrefint                       # stm32 internal reference voltage monitoring
+
+uavcan.si.unit.temperature.Scalar.1.0 temp1                     # gear controller on-board temperature
+uavcan.si.unit.temperature.Scalar.1.0 stm32_core_temp           # internally measured STM32 core temperature
+
+@extent 63 * 8
