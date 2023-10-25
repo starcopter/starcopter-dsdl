@@ -1,0 +1,12 @@
+# Single Gear Setpoint sufficient for both gears
+# This type is expected to be used primarily for setpoint purpose, but also be used for feedback purpose.
+
+uint4 state
+
+uint4 STATE_EXTENDED   = 0
+uint4 STATE_EXTENDING  = 1
+uint4 STATE_RETRACTED  = 2
+uint4 STATE_RETRACTING = 3
+uint4 STATE_ERROR      = 15  # gear is stuck, or something else is a miss
+
+@sealed
