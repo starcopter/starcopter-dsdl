@@ -1,0 +1,38 @@
+# aeric v0.3 BMS System Status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+bool btn_in_status                                          # bms user/input button status
+bool boot_pin_status                                        # bms boot pin status
+bool chg_pin_status 	                                    # bms CHG pin status
+bool dsg_pin_status                                         # bms DSG pin status
+bool pdsg_en_status                                         # bms PDSG_EN pin status
+bool vbus_active_status                                     # bms vbus active pin status
+bool can_iface_status                                       # bms CAN interface status (Error Active / Error Passive)
+
+bool vbat_ripple_high                                       # battery voltage ripple above threshold
+bool vpack_ripple_high                                      # pack voltage ripple above threshold
+bool ibat_ripple_high                                       # battery current ripple above threshold
+bool abs_ibat_high                                          # absolute battery current above threshold
+
+bool bat_key_status                                         # bms analog key connected (inside copter, not open wire)
+
+bool[6] cell_balancing                                      # bms cell balancing status
+
+uavcan.si.unit.voltage.Scalar.1.0 bat_key                   # measured battery key voltage
+
+uavcan.si.unit.voltage.Scalar.1.0 vbat_ripple               # battery voltage ripple measurements
+uavcan.si.unit.voltage.Scalar.1.0 vpack_ripple              # pack voltage ripple measurements
+uavcan.si.unit.electric_current.Scalar.1.0 ibat_ripple      # battery current ripple measurements
+
+uavcan.si.unit.electric_current.Scalar.1.0 i5       	    # 5v current consumption
+
+uavcan.si.unit.voltage.Scalar.1.0 vrefint                   # stm32 external reference voltage monitoring
+uavcan.si.unit.voltage.Scalar.1.0 vdd                       # stm32 supply voltage monitoring
+uavcan.si.unit.voltage.Scalar.1.0 balancing_target_voltage  # cell balancing target voltage
+
+@extent 63 * 8
