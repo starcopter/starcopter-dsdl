@@ -14,9 +14,9 @@ bool pdsg_en_status                                         # bms PDSG_EN pin st
 bool vbus_active_status                                     # bms vbus active pin status
 bool can_iface_status                                       # bms CAN interface status (Error Active / Error Passive)
 
-bool vbat_stddev_high                                       # battery voltage standard deviation above threshold
-bool vpack_stddev_high                                      # pack voltage standard deviation above threshold
-bool ibat_stddev_high                                       # battery current standard deviation above threshold
+bool vbat_std_high                                          # battery voltage standard deviation above threshold
+bool vpack_std_high                                         # pack voltage standard deviation above threshold
+bool ibat_std_high                                          # battery current standard deviation above threshold
 bool ibat_rms_high                                          # battery RMS current above threshold
 
 bool bat_key_status                                         # bms analog key connected (inside copter, not open wire)
@@ -25,9 +25,10 @@ bool[6] cell_balancing                                      # bms cell balancing
 
 uavcan.si.unit.voltage.Scalar.1.0 bat_key                   # measured battery key voltage
 
-uavcan.si.unit.voltage.Scalar.1.0 vbat_stddev               # battery voltage standard deviation
-uavcan.si.unit.voltage.Scalar.1.0 vpack_stddev              # pack voltage standard deviation
-uavcan.si.unit.electric_current.Scalar.1.0 ibat_stddev      # battery current standard deviation
+uavcan.si.unit.voltage.Scalar.1.0 vbat_std                  # battery voltage standard deviation
+uavcan.si.unit.voltage.Scalar.1.0 vpack_std                 # pack voltage standard deviation
+uavcan.si.unit.electric_current.Scalar.1.0 ibat_std         # battery current standard deviation
+uavcan.si.unit.electric_current.Scalar.1.0 ibat_rms         # battery current root mean square
 
 uavcan.si.unit.electric_current.Scalar.1.0 i5       	    # 5v current consumption
 
