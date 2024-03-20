@@ -17,7 +17,7 @@ bool can_iface_status                                       # bms CAN interface 
 bool vbat_stddev_high                                       # battery voltage standard deviation above threshold
 bool vpack_stddev_high                                      # pack voltage standard deviation above threshold
 bool ibat_stddev_high                                       # battery current standard deviation above threshold
-bool abs_ibat_high                                          # absolute battery current above threshold
+bool ibat_rms_high                                          # battery RMS current above threshold
 
 bool bat_key_status                                         # bms analog key connected (inside copter, not open wire)
 
