@@ -1,0 +1,20 @@
+# BMS System Status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+bool boot_pin_state
+bool chg_pin_state
+bool dsg_pin_state
+bool hs_en
+bool hs_ok
+bool scp_active
+
+starcopter.highdra.bms.CanState.0.1 can_state
+starcopter.highdra.bms.ButtonState.0.1 button_state
+starcopter.highdra.bms.Location.0.1 location
+
+@extent 63 * 8

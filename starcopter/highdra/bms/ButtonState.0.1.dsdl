@@ -1,0 +1,9 @@
+
+uint4 button
+
+uint4 RELEASED      = 0
+uint4 PRESSED       = 1
+uint4 LONG_PRESSED  = 2
+uint4 INVALID       = 15
+
+@sealed

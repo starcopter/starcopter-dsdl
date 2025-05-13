@@ -1,0 +1,10 @@
+# Battery Management System (BMS) Cell Votage Record
+
+uavcan.si.unit.voltage.Scalar.1.0 cell0
+uavcan.si.unit.voltage.Scalar.1.0 cell1    
+uavcan.si.unit.voltage.Scalar.1.0 cell2    
+uavcan.si.unit.voltage.Scalar.1.0 cell3    
+uavcan.si.unit.voltage.Scalar.1.0 cell4  
+uavcan.si.unit.voltage.Scalar.1.0 cell5
+
+@sealed

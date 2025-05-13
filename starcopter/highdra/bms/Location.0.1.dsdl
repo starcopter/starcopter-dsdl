@@ -1,0 +1,9 @@
+
+uint4 location
+
+uint4 OPEN_WIRE = 0
+uint4 COPTER    = 1
+uint4 CHARGER   = 2
+uint4 INVALID   = 15
+
+@sealed

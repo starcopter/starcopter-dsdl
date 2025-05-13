@@ -1,0 +1,25 @@
+# Battery Management System (BMS) Power Data
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+uavcan.si.unit.voltage.Scalar.1.0 vkey
+uavcan.si.unit.voltage.Scalar.1.0 vcc
+uavcan.si.unit.voltage.Scalar.1.0 v3v3
+uavcan.si.unit.voltage.Scalar.1.0 vref
+uavcan.si.unit.voltage.Scalar.1.0 vbat
+uavcan.si.unit.voltage.Scalar.1.0 vpack
+
+starcopter.highdra.bms.CellVoltages.0.1 vcells
+
+uavcan.si.unit.electric_current.Scalar.1.0 i5v
+uavcan.si.unit.electric_current.Scalar.1.0 ihs
+uavcan.si.unit.electric_current.Scalar.1.0 ibat
+
+# 15 values, each scalar / float => 32-bit * 15 = 480 bit = 60 Byte
+# + timestamp
+
+@extent 68 * 8

@@ -1,0 +1,10 @@
+
+uint4 state
+
+uint4 CAN_STATE_ERROR_ACTIVE    = 0
+uint4 CAN_STATE_ERROR_WARNING   = 1
+uint4 CAN_STATE_ERROR_PASSIVE   = 2
+uint4 CAN_STATE_BUS_OFF         = 3
+uint4 CAN_STATE_STOPPED         = 4
+
+@sealed

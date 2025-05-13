@@ -1,0 +1,22 @@
+# Battery Management System (BMS) Temperatures
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+uavcan.si.unit.temperature.Scalar.1.0 tempPack0
+uavcan.si.unit.temperature.Scalar.1.0 tempPack1
+uavcan.si.unit.temperature.Scalar.1.0 tempPack2
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS0
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS1
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS2
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS3
+uavcan.si.unit.temperature.Scalar.1.0 tempCore
+uavcan.si.unit.temperature.Scalar.1.0 tempBQ76925
+
+# 9 values, Scalar 
+# + timestamp
+
+@extent 63 * 8
