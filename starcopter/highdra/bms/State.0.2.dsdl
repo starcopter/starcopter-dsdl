@@ -1,0 +1,23 @@
+# BMS System Status
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+bool boot_pin_state                                     # boot pin status 
+bool chg_pin_state                                      # power latch CHG pin status
+bool dsg_pin_state                                      # power latch DSG pin status
+bool hs_en                                              # HotSwap output state
+bool hs_ok                                              # HotSwap status input pin status
+bool scp_active                                         # scp protection arm/disarm state
+
+starcopter.highdra.bms.CanState.0.1 can_state           # CAN interface status (Error Active / Error Passive)
+starcopter.highdra.bms.ButtonState.0.1 button_state     # user/input button status
+starcopter.highdra.bms.Location.0.1 location            # decoded location from vkey measurement; Copter/Charger/Open 
+
+starcopter.highdra.bms.StateFSM.0.1 fsm                 # fsm current status
+starcopter.highdra.bms.Error.0.1 error_state            # current errors
+
+@extent 63 * 8

@@ -1,0 +1,25 @@
+# Battery Management System (BMS) extended Power Data, mainly for debug, logging, and development
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp
+
+void8
+
+@assert _offset_ % 32 == {0}
+
+uavcan.si.unit.voltage.Scalar.1.0 vkey                      # slot voltage
+uavcan.si.unit.voltage.Scalar.1.0 vcc                       # always-on 3.3V measured via STM32 VBat internal adc
+uavcan.si.unit.voltage.Scalar.1.0 v3v3                      # disable-able 3.3V 
+uavcan.si.unit.voltage.Scalar.1.0 vref                      # internal ADC / DAC reference voltage measured via STM32 vref internal adc
+uavcan.si.unit.voltage.Scalar.1.0 vbat                      # battery voltage
+uavcan.si.unit.voltage.Scalar.1.0 vpack                     # pack voltage
+
+uavcan.si.unit.voltage.Scalar.1.0[6] vcells                 # battery cell voltages from BQ76925
+
+uavcan.si.unit.electric_current.Scalar.1.0 i5v              # 5v current consumption
+uavcan.si.unit.electric_current.Scalar.1.0 ihs              # HotSwap current
+uavcan.si.unit.electric_current.Scalar.1.0 ibat             # battery current 
+
+uavcan.si.unit.voltage.Scalar.1.0 balancing_target_voltage  # cell balancing target voltage
+bool[6] cell_balancing                                      # bms cell balancing status
+
+@extent 78 * 8

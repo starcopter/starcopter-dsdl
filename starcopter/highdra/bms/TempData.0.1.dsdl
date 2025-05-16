@@ -6,17 +6,14 @@ void8
 
 @assert _offset_ % 32 == {0}
 
-uavcan.si.unit.temperature.Scalar.1.0 tempPack0
-uavcan.si.unit.temperature.Scalar.1.0 tempPack1
-uavcan.si.unit.temperature.Scalar.1.0 tempPack2
-uavcan.si.unit.temperature.Scalar.1.0 tempBMS0
-uavcan.si.unit.temperature.Scalar.1.0 tempBMS1
-uavcan.si.unit.temperature.Scalar.1.0 tempBMS2
-uavcan.si.unit.temperature.Scalar.1.0 tempBMS3
-uavcan.si.unit.temperature.Scalar.1.0 tempCore
-uavcan.si.unit.temperature.Scalar.1.0 tempBQ76925
-
-# 9 values, Scalar 
-# + timestamp
+uavcan.si.unit.temperature.Scalar.1.0 tempPack0     # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 tempPack1     # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 tempPack2     # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS0      # temperature sense across current sense resistor
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS1      # temperature sense near power stage (FET drivers)
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS2      # temperature sense across positive battery rail
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS3      # temperature sense across negative battery rail
+uavcan.si.unit.temperature.Scalar.1.0 tempCore      # internally measured STM32 core temperature
+uavcan.si.unit.temperature.Scalar.1.0 tempBQ76925   # BQ76925 internal temperature sensor
 
 @extent 63 * 8

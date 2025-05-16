@@ -1,0 +1,14 @@
+
+uint4 state
+
+uint4 FSM_INIT              = 0
+uint4 FSM_IDLE              = 1
+uint4 FSM_COPTER            = 2
+uint4 FSM_CHARGER           = 3
+uint4 FSM_HOTSWAPCHARGE     = 4
+uint4 FSM_SHUTDOWN          = 5
+uint4 FSM_SOCFEEDBACK       = 6
+uint4 FSM_ERROR             = 7
+uint4 FSM_INVALID           = 15
+
+@sealed

@@ -1,0 +1,7 @@
+
+bool is_scp_error                  
+bool is_overtemperature_error        
+bool is_overvoltage_error         
+bool is_overcurrent_error   
+
+@sealed
