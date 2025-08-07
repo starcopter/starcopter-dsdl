@@ -1,0 +1,18 @@
+
+uint8 location
+
+# static_cast in C to the state
+# this enumeration should correspond with the enum of bms.h / BMS_KEY
+
+uint8 INVALID      = 0
+uint8 COPTER2      = 2
+uint8 COPTER4      = 4
+uint8 COPTER6      = 6
+uint8 COPTER8      = 8
+uint8 COPTER10     = 10
+uint8 COPTER12     = 12
+uint8 TEST_FIXTURE = 25
+uint8 OPEN_WIRE    = 26
+uint8 CHARGER      = 27
+
+@sealed
