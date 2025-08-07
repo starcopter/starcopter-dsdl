@@ -4,35 +4,37 @@ uavcan.time.SynchronizedTimestamp.1.0 timestamp         # 56 bit
 void8                                                   # placeholder
 @assert _offset_ % 32 == {0}                            # align
 
-uint32 set_id
-uint32 bms_pack_uid
+uint32 pack_sn
 @assert _offset_ % 32 == {0}                            # align
 
+uint16 set_id
 int4 set_index
-void4                                                   # placeholder
-starcopter.highdra.bms.Location.0.2 location            # decoded location from vkey measurement; uint8
 bool latch_discharge
 bool latch_charge
 bool hs_enable
-bool connected
-void4
-starcopter.highdra.bms.Error.0.2 error_state            # current errors; 5x bool; sealed -> 1B
+void1
+starcopter.highdra.bms.Location.0.2 location            # decoded location from vkey measurement; uint8
 @assert _offset_ % 32 == {0}                            # align
 
+starcopter.highdra.bms.Error.0.2 error_state            # current errors; 5x bool; sealed -> 1B
+bool connected
+bool button
+void6
 uint16 vbat_mv
+@assert _offset_ % 32 == {0}                            # align
 uint16 vpack_mv
+int8 temperature_c_min
+int8 temperature_c_max
+@assert _offset_ % 32 == {0}                            # align
 float32 ibat_a
 float32 ihs_a
 uint16 vcells_mv_min
 uint16 vcells_mv_max
 float32 power_w_filtered
-
-int8 temperature_c_min
-int8 temperature_c_max
-starcopter.highdra.bms.StateFSM.0.2 fsm                 # fsm current status, uint8
-void8                                                   # placeholder
+float32 soc
 @assert _offset_ % 32 == {0}                            # align
 
-float32 soc
+starcopter.highdra.bms.StateFSM.0.2 fsm                 # fsm current status, uint8
+
 
 @extent 63 * 8

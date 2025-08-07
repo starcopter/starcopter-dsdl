@@ -4,5 +4,8 @@ bool is_overtemperature_error
 bool is_overvoltage_error
 bool is_undervoltage_error
 bool is_overcurrent_error
+bool is_set_error
+
+void2
 
 @sealed
