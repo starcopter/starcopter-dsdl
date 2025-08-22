@@ -16,7 +16,7 @@ void1
 starcopter.highdra.bms.Location.0.2 location            # decoded location from vkey measurement; uint8
 @assert _offset_ % 32 == {0}                            # align
 
-starcopter.highdra.bms.Error.0.2 error_state            # current errors; 5x bool; sealed -> 1B
+starcopter.highdra.bms.Error.0.2 error_state            # current errors; sealed -> 1B
 bool connected
 bool button
 void6
