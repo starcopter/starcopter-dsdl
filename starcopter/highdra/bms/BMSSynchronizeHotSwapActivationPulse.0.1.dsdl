@@ -1,0 +1,12 @@
+# BMS Hotswap activation synchronization pulse message
+
+uint16 set_id
+
+uint2 activation_direction
+
+uint2 ACTIVATE      = 0
+uint2 DEACTIVATE    = 1
+uint2 TOGGLE        = 2
+uint2 INVALID       = 3
+
+@sealed
