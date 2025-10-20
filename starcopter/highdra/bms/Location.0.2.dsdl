@@ -2,7 +2,7 @@
 uint8 location
 
 # static_cast in C to the state
-# this enumeration should correspond with the enum of bms.h / BMS_KEY
+# this enumeration should correspond with the enum of bms.h / BMS::KEY
 
 uint8 INVALID      = 0
 uint8 COPTER2      = 2

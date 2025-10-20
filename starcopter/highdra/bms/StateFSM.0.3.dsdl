@@ -1,0 +1,20 @@
+
+uint8 state 
+
+# static_cast in C to the state
+# this enumeration should correspond with the enum of BMSContext.hpp / FSM_STATE
+
+uint8 FSM_UNKNOWN         = 0
+uint8 FSM_INIT            = 1
+uint8 FSM_IDLE            = 2
+uint8 FSM_HOTSWAP_CHARGE  = 3
+uint8 FSM_COPTER          = 4
+uint8 FSM_CHARGER_IDLE    = 5
+uint8 FSM_ERROR           = 6
+uint8 FSM_SHUTDOWN        = 7
+uint8 FSM_SOC_FEEDBACK    = 8
+uint8 FSM_CHARGER_HS      = 9
+uint8 FSM_CHARGER_CHG_DSG = 10
+uint8 FSM_CHARGER_WAITING = 11
+
+@sealed

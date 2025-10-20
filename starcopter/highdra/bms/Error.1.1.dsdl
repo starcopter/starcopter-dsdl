@@ -1,0 +1,26 @@
+
+bool is_scp_error
+bool is_overtemperature_error
+bool is_undertemperature_error
+bool is_overvoltage_error
+bool is_undervoltage_error
+bool is_overcurrent_error
+bool is_vpack_always_on
+bool is_set_unbalanced
+bool is_other
+
+void3
+
+bool self_is_scp_error
+bool self_is_overtemperature_error
+bool self_is_undertemperature_error
+bool self_is_overvoltage_error
+bool self_is_undervoltage_error
+bool self_is_overcurrent_error
+bool self_is_vpack_always_on
+bool self_is_set_unbalanced
+bool self_is_other
+
+void3
+
+@sealed
