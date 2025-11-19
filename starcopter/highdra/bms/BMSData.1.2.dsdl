@@ -1,7 +1,7 @@
 # BMS Data
 
 uavcan.time.SynchronizedTimestamp.1.0 timestamp         # 56 bit
-starcopter.highdra.bms.StateFSM.0.3 fsm                 # fsm current status, uint8
+starcopter.highdra.bms.StateFSM.0.4 fsm                 # fsm current status, uint8
 @assert _offset_ % 32 == {0}                            # align
 
 uint32 pack_sn
