@@ -1,0 +1,42 @@
+# MB Data
+
+uavcan.time.SynchronizedTimestamp.1.0 timestamp         # 56 bit
+void8                                                   # placeholder
+@assert _offset_ % 32 == {0}                            # align
+
+uint32 uptime_s     
+
+uint8[16] mb_sn
+@assert _offset_ % 32 == {0}                            # align
+
+uint16 bms_set_id
+uint16 bms_sum_ibat_v48_ma                              # v48 x sum_ibat = power
+@assert _offset_ % 32 == {0}                            # align
+uint16 bms_sum_v48_mv
+int8 bms_max_battery_temp                               # celsius
+
+bool airborne                                           # extracted from mavlink
+bool booting                                            # MB boot sequence active (esc configuration, mmb activation)
+void6
+
+@assert _offset_ % 32 == {0}                            # align
+uint16 v48_mv
+uint16 v5ext_mv
+uint16 v25ext_mv
+# vcc
+# vref
+# v5v
+# vmmb
+
+uint16 isky_ma
+uint16 i5ext_ma
+uint16 i25ext_ma
+uint16 immb_ma
+# i5
+
+void16
+@assert _offset_ % 32 == {0}                            # align
+
+float32 avg_humidity
+
+@extent 63 * 8
