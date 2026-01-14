@@ -1,0 +1,61 @@
+# BMS Data extend:
+
+uint32 uptime_ms
+
+@assert _offset_ % 32 == {0}                                # align
+
+starcopter.highdra.bms.CanState.0.1 can_state               # CAN interface status (Error Active / Error Passive) 4-bit
+starcopter.highdra.bms.ButtonState.0.1 button_state         # user/input button status 4-bit
+
+bool scp_active                                             # scp protection arm/disarm state
+bool[6] cell_balancing                                      # bms cell balancing status
+
+void9
+@assert _offset_ % 32 == {0}                                # align
+
+# + 21 x 2B (16-bit) = 42 B
+# uint16 vkey_mv                      # slot voltage
+# uint16 vcc_mv                       # always-on 3.3V measured via STM32 VBat internal adc
+# uint16 v3v3_mv                      # disable-able 3.3V 
+# uint16 vref_mv                      # internal ADC / DAC reference voltage measured via STM32 vref internal adc
+# uint16[6] vcells_mv                 # battery cell voltages from BQ76925
+# int16 i5v_ma                        # 5v current consumption
+# uint16 balancing_target_voltage_mv  # cell balancing target voltage
+# int16 tempPack0                     # temperature sense inside battery pack [C x 100 = centi-celsius]
+# int16 tempPack1                     # temperature sense inside battery pack [C x 100 = centi-celsius]
+# int16 tempPack2                     # temperature sense inside battery pack [C x 100 = centi-celsius]
+# int16 tempBMS0                      # temperature sense across current sense resistor [C x 100 = centi-celsius]
+# int16 tempBMS1                      # temperature sense near power stage (FET drivers) [C x 100 = centi-celsius]
+# int16 tempBMS2                      # temperature sense across positive battery rail [C x 100 = centi-celsius]
+# int16 tempBMS3                      # temperature sense across negative battery rail [C x 100 = centi-celsius]
+# int16 tempCore                      # internally measured STM32 core temperature [C x 100 = centi-celsius]
+# int16 tempBQ76925                   # BQ76925 internal temperature sensor [C x 100 = centi-celsius]
+# @extent 63 * 8
+
+# + 21 x 4B (float) = 84 B
+uavcan.si.unit.voltage.Scalar.1.0 vkey                      # slot voltage
+uavcan.si.unit.voltage.Scalar.1.0 vcc                       # always-on 3.3V measured via STM32 VBat internal adc
+uavcan.si.unit.voltage.Scalar.1.0 v3v3                      # disable-able 3.3V 
+uavcan.si.unit.voltage.Scalar.1.0 vref                      # internal ADC / DAC reference voltage measured via STM32 vref internal adc
+uavcan.si.unit.voltage.Scalar.1.0[6] vcells                 # battery cell voltages from BQ76925
+uavcan.si.unit.electric_current.Scalar.1.0 i5v              # 5v current consumption
+uavcan.si.unit.voltage.Scalar.1.0 balancing_target_voltage  # cell balancing target voltage
+uavcan.si.unit.temperature.Scalar.1.0 tempPack0             # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 tempPack1             # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 tempPack2             # temperature sense inside battery pack
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS0              # temperature sense across current sense resistor
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS1              # temperature sense near power stage (FET drivers)
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS2              # temperature sense across positive battery rail
+uavcan.si.unit.temperature.Scalar.1.0 tempBMS3              # temperature sense across negative battery rail
+uavcan.si.unit.temperature.Scalar.1.0 tempCore              # internally measured STM32 core temperature
+uavcan.si.unit.temperature.Scalar.1.0 tempBQ76925           # BQ76925 internal temperature sensor
+
+# duplicated: (already in BMSData in milli as int16/uint16)
+uavcan.si.unit.voltage.Scalar.1.0 vbat                      # battery voltage
+uavcan.si.unit.voltage.Scalar.1.0 vpack                     # pack voltage
+
+# duplicated: (already in BMSData as float32)
+uavcan.si.unit.electric_current.Scalar.1.0 ihs              # HotSwap current
+uavcan.si.unit.electric_current.Scalar.1.0 ibat             # battery current
+
+@extent 127 * 8
