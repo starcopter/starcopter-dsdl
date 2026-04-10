@@ -1,5 +1,6 @@
 # Single Gear Setpoint sufficient for both gears
-# This type is expected to be used primarily for setpoint purpose, but also be used for feedback purpose.
+# received by Gear Controller. short live time (timeout after receive ~1s)
+# overwrites received messages (setpoint) of type starcopter.GearState.0.1 
 
 uint4 command
 

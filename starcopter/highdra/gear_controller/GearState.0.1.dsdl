@@ -1,5 +1,5 @@
-# Single Gear Setpoint sufficient for both gears
-# This type is expected to be used primarily for setpoint purpose, but also be used for feedback purpose.
+# Overall Gear Controller state (it has two Servos)
+# This type is for feedback purpose.
 
 uint4 state
 
