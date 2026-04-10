@@ -1,0 +1,11 @@
+# Single Gear Setpoint sufficient for both gears
+# This type is expected to be used primarily for setpoint purpose, but also be used for feedback purpose.
+
+uint4 command
+
+uint4 COMMAND_NONE    = 0
+uint4 COMMAND_EXTEND  = 1
+uint4 COMMAND_RETRACT = 2
+uint4 COMMAND_STOP    = 3
+
+@sealed

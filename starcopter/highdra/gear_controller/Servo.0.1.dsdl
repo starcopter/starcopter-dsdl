@@ -1,0 +1,37 @@
+# Servo characteristics, both mechanical and electrical.
+# used for feedback.
+
+uavcan.si.unit.angle.Scalar.1.0 position
+# Leg gear wheel angular position in radian.
+# 0° = 0 is extended position, while ~211° = 3.683 is retracted.
+# During calibration, when no absolute position is known, this field should be set to NaN (not-a-number).
+
+uavcan.si.unit.angular_velocity.Scalar.1.0 speed
+# Motor angular velocity in radian/s.
+
+uavcan.si.unit.electric_current.Scalar.1.0 current
+# Phase current in A.
+
+uavcan.si.unit.voltage.Scalar.1.0 voltage
+# Motor driving voltage in V. [this voltage = supply voltage x pwm percentage]
+# Example: at a supply voltage of 12 V and running at 25% duty cycle in reverse, the phase voltage would be -3 V.
+
+bool positive_polarity
+# polarity of the motor is positive?
+
+uint4 state
+# Motor axis control state
+
+uint4 STATE_UNCALIBRATED         = 0
+uint4 STATE_CALIBRATING          = 1  # extending slowly
+uint4 STATE_MOVING_EXTEND        = 2
+uint4 STATE_MOVING_RETRACT       = 3
+uint4 STATE_BACKOFF_FROM_EXTEND  = 4
+uint4 STATE_BACKOFF_FROM_RETRACT = 5
+uint4 STATE_AT_EXTEND            = 6
+uint4 STATE_AT_RETRACT           = 7
+uint4 STATE_STOPPED              = 8  # when receiving stop signal. waiting for other command
+uint4 STATE_FAULT                = 15 # gear is stuck, or something else is a miss
+
+
+@sealed
