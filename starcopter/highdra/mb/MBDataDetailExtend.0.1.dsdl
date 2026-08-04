@@ -1,0 +1,41 @@
+# MB Data extend (detail / remaining analog measurements)
+
+uint32 uptime_ms
+
+# Voltages
+uavcan.si.unit.voltage.Scalar.1.0 vcc                       # STM32 always-on supply (VBAT sense)
+uavcan.si.unit.voltage.Scalar.1.0 vref                      # STM32 internal ADC reference
+uavcan.si.unit.voltage.Scalar.1.0 vsky1                     # Skynode primary rail (~5.2 V)
+uavcan.si.unit.voltage.Scalar.1.0 v5v                       # 5 V logic / CAN rail
+uavcan.si.unit.voltage.Scalar.1.0 vmmb                      # MMB supply rail (~25 V)
+
+# Currents
+uavcan.si.unit.electric_current.Scalar.1.0 i5               # 5 V rail current
+
+# Temperatures [kelvin]
+uavcan.si.unit.temperature.Scalar.1.0[6] temp_esc           # ESC / arm connector temps (clock 1,3,5,7,9,11)
+uavcan.si.unit.temperature.Scalar.1.0[6] temp_bms           # Pizza / BMS connector temps (clock 2,4,6,8,10,12)
+uavcan.si.unit.temperature.Scalar.1.0[4] temp_mb            # Motherboard PCB NTCs
+uavcan.si.unit.temperature.Scalar.1.0[4] temp_m             # HDC board ambient temps (M1,M5,M7,M11)
+uavcan.si.unit.temperature.Scalar.1.0 temp_core             # STM32 die temperature
+
+# 4 + 27 * 4 = 112
+
+# Humidity per HDC sensor: centi-percent = RH% * 100 (0.00 % .. 100.00 % → 0 .. 10000)
+# Use 65535 if measurement unavailable (NaN)
+uint16[4] hum_m_centi                                       # M1, M5, M7, M11
+
+# 112 + 4 * 2 = 120
+
+# --- Duplicates of MBData.0.1 quantities as SI floats (comment out if unused) ---
+uavcan.si.unit.voltage.Scalar.1.0 v48                       # combined battery bus (~48 V)
+uavcan.si.unit.voltage.Scalar.1.0 v5ext                     # 5 V external rail
+uavcan.si.unit.voltage.Scalar.1.0 v25ext                    # 25 V external rail
+uavcan.si.unit.electric_current.Scalar.1.0 isky             # Skynode rail current
+uavcan.si.unit.electric_current.Scalar.1.0 i5ext            # 5 V external current
+uavcan.si.unit.electric_current.Scalar.1.0 i25ext           # 25 V external current
+uavcan.si.unit.electric_current.Scalar.1.0 immb             # MMB rail current
+
+# 120 + 7 * 4 = 148
+
+@extent 192 * 8 # 3 * 64 = 192
