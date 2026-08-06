@@ -1,11 +1,11 @@
 # BMS Data
 
 uavcan.time.SynchronizedTimestamp.1.0 timestamp         # 56 bit
-starcopter.highdra.bms.StateFSM.0.4 fsm                 # fsm current status, uint8
-@assert _offset_ % 32 == {0}                            # align | 64b, 8B
+starcopter.highdra.bms.StateFSM.0.4 fsm                 # fsm current status, uint8 | 8B
+@assert _offset_ % 32 == {0}                            # align + 0B
 
 uint32 pack_sn                                          # | 12B
-@assert _offset_ % 32 == {0}                            # align
+@assert _offset_ % 32 == {0}                            # align + 0B
 
 uint16 set_id                                           # | 14B
 int4 set_index
@@ -16,7 +16,7 @@ bool connected                                          # | 15B
 bool button
 bool shutdown_request
 void6                                                   # | 16B
-@assert _offset_ % 32 == {0}                            # align
+@assert _offset_ % 32 == {0}                            # align + 0B
 
 starcopter.highdra.bms.Error.1.1 error_state            # current errors + self flag; sealed 3*8=24 bit
 starcopter.highdra.bms.Location.0.2 location            # decoded location from vkey measurement; uint8
@@ -30,9 +30,16 @@ float32 ihs_a                                           # | 32B
 uint16 vcells_mv_min                                    # | 34B
 uint16 vcells_mv_max                                    # | 36B
 float32 power_w_filtered                                # | 40B
-float32 soc                                             # | 44B
-@assert _offset_ % 32 == {0}                            # align
+float32 soc                                             # | 44B individual measured, voltage based
+@assert _offset_ % 32 == {0}                            # align + 0B
 uint16 vbat_mv                                          # | 46B
 
+# WIP: SoC improvements 
+
+uint16 cap_mon_soc_centi                                # 0...100 % [x 100] | 48B 
+float32 cap_mon_discharger                              # Ws | 52B
+float32 cap_mon_charge                                  # Ws | 56B
+float cap_mon_r                                         # used internal resistance | 60B
+uint16 cap_mon_v_ocv_mv                                 # | 62B
 
 @extent 63 * 8
