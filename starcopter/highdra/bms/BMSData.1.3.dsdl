@@ -39,7 +39,7 @@ uint16 vbat_mv                                          # | 46B
 uint16 cap_mon_soc_centi                                # 0...100 % [x 100] | 48B 
 float32 cap_mon_discharger                              # Ws | 52B
 float32 cap_mon_charge                                  # Ws | 56B
-float cap_mon_r                                         # used internal resistance | 60B
+float32 cap_mon_r                                         # used internal resistance | 60B
 uint16 cap_mon_v_ocv_mv                                 # | 62B
 
 @extent 63 * 8
