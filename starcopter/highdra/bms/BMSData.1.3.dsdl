@@ -39,7 +39,14 @@ uint16 vbat_mv                                          # | 46B
 uint16 cap_mon_soc_centi                                # 0...100 % [x 100] | 48B 
 float32 cap_mon_discharger                              # Ws | 52B
 float32 cap_mon_charge                                  # Ws | 56B
-float32 cap_mon_r                                         # used internal resistance | 60B
+float32 cap_mon_r                                       # used internal resistance | 60B
 uint16 cap_mon_v_ocv_mv                                 # | 62B
+
+uint2 cap_mon_use_mode                                  # 
+
+uint2 USE_MODE_UNKNOWN        = 0
+uint2 USE_MODE_IDLE           = 1
+uint2 USE_MODE_CHARGING       = 2
+uint2 USE_MODE_DISCHARGING    = 3
 
 @extent 63 * 8
