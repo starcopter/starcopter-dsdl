@@ -19,7 +19,9 @@ int8 bms_max_battery_temp                               # celsius
 bool airborne                                           # extracted from mavlink
 bool booting                                            # MB boot sequence active (esc configuration, mmb activation)
 bool bms_shutdown_command                               # Shutdown BMS (not possible while airborne)
-void5
+void1
+
+starcopter.highdra.mb.FlightState.0.1 flight_state
 
 @assert _offset_ % 32 == {0}                            # align
 uint16 v48_mv
