@@ -38,4 +38,6 @@ uavcan.si.unit.electric_current.Scalar.1.0 immb             # MMB rail current
 
 # 120 + 7 * 4 = 148
 
+starcopter.highdra.mb.FlightState.0.1 flight_state
+
 @extent 192 * 8 # 3 * 64 = 192

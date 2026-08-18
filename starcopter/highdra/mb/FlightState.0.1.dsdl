@@ -1,0 +1,7 @@
+uint4 state 
+
+uint8 FLIGHT_STATE_UNKNOWN         = 0
+uint8 FLIGHT_STATE_GROUNDED        = 1
+uint8 FLIGHT_STATE_AIRBORNE        = 2
+
+@sealed
